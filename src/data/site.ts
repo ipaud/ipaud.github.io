@@ -3,7 +3,7 @@ export const site = {
   name: 'Pau Ávila',
   title: 'Pau Ávila · Proyectos',
   intro:
-    'Diseño y construyo objetos: electrónica, modelado en Blender e impresión 3D. Aquí van los proyectos, terminados o a medias.',
+    'Diseño y construyo objetos y apps: electrónica, modelado en Blender, impresión 3D y software. Aquí van los proyectos, terminados o a medias.',
   github: 'https://github.com/ipaud',
   email: 'pavilaotero@gmail.com',
   links: [

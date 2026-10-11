@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e4e1ee"/>
+  <!-- barra de menús -->
+  <rect width="800" height="36" fill="#f3f4ef"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#cfccd9" stroke-width="2"/>
+  <g fill="#9a98a6"><rect x="24" y="13" width="14" height="10" rx="2"/><rect x="52" y="14" width="44" height="8" rx="4"/><rect x="108" y="14" width="30" height="8" rx="4"/></g>
+  <rect x="590" y="7" width="26" height="22" rx="6" fill="#17191b"/>
+  <g fill="#f3f4ef"><rect x="596" y="12" width="10" height="12" rx="2"/><rect x="600" y="15" width="10" height="12" rx="2" stroke="#17191b" stroke-width="1.5"/></g>
+  <g fill="#9a98a6"><rect x="636" y="14" width="20" height="8" rx="4"/><rect x="668" y="14" width="20" height="8" rx="4"/><rect x="700" y="14" width="76" height="8" rx="4"/></g>
+  <!-- panel -->
+  <ellipse cx="400" cy="560" rx="200" ry="14" fill="#c9c5d6"/>
+  <rect x="200" y="70" width="400" height="476" rx="22" fill="#f3f4ef" stroke="#17191b" stroke-width="5"/>
+  <!-- buscador -->
+  <rect x="226" y="96" width="348" height="44" rx="12" fill="#ffffff" stroke="#d6dbd3" stroke-width="2"/>
+  <circle cx="250" cy="116" r="8" fill="none" stroke="#17191b" stroke-width="3"/>
+  <line x1="256" y1="122" x2="263" y2="129" stroke="#17191b" stroke-width="3" stroke-linecap="round"/>
+  <rect x="276" y="112" width="70" height="9" rx="4.5" fill="#17191b"/>
+  <rect x="350" y="106" width="3" height="22" fill="#7c6fd6"/>
+  <!-- fila seleccionada -->
+  <rect x="226" y="158" width="348" height="58" rx="12" fill="#17191b"/>
+  <rect x="242" y="173" width="28" height="28" rx="7" fill="#7c6fd6"/>
+  <rect x="284" y="178" width="170" height="8" rx="4" fill="#f3f4ef"/><rect x="284" y="192" width="110" height="7" rx="3.5" fill="#6b6f72"/>
+  <rect x="520" y="176" width="38" height="22" rx="6" fill="#2f3532"/><rect x="528" y="184" width="22" height="6" rx="3" fill="#f3f4ef"/>
+  <!-- resto de filas -->
+  <g>
+    <rect x="242" y="241" width="28" height="28" rx="7" fill="#5cc595"/>
+    <rect x="284" y="246" width="200" height="8" rx="4" fill="#3b423e"/><rect x="284" y="260" width="90" height="7" rx="3.5" fill="#b9bdb6"/>
+    <path d="M530 246 l12 0 l-2 8 l4 6 l-16 0 l4 -6 z M536 260 l0 9" fill="#e8705f" stroke="#17191b" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <line x1="242" y1="290" x2="558" y2="290" stroke="#e1e4dd" stroke-width="2"/>
+  <g>
+    <rect x="242" y="309" width="28" height="28" rx="7" fill="#f6c453"/>
+    <rect x="284" y="314" width="150" height="8" rx="4" fill="#3b423e"/><rect x="284" y="328" width="120" height="7" rx="3.5" fill="#b9bdb6"/>
+  </g>
+  <line x1="242" y1="358" x2="558" y2="358" stroke="#e1e4dd" stroke-width="2"/>
+  <g>
+    <rect x="242" y="377" width="28" height="28" rx="7" fill="#4f8fe8"/>
+    <rect x="284" y="382" width="186" height="8" rx="4" fill="#3b423e"/><rect x="284" y="396" width="70" height="7" rx="3.5" fill="#b9bdb6"/>
+  </g>
+  <line x1="242" y1="426" x2="558" y2="426" stroke="#e1e4dd" stroke-width="2"/>
+  <g>
+    <rect x="242" y="445" width="28" height="28" rx="7" fill="#e8705f"/>
+    <rect x="284" y="450" width="130" height="8" rx="4" fill="#3b423e"/><rect x="284" y="464" width="100" height="7" rx="3.5" fill="#b9bdb6"/>
+  </g>
+  <rect x="226" y="496" width="348" height="1" fill="#e1e4dd"/>
+  <g fill="#b9bdb6"><rect x="242" y="512" width="60" height="7" rx="3.5"/><rect x="314" y="512" width="44" height="7" rx="3.5"/><rect x="498" y="512" width="60" height="7" rx="3.5"/></g>
+</svg>
