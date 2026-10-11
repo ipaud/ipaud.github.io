@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="600" fill="#dbe1ea"/>
+  <!-- blíster de atrás -->
+  <g transform="translate(470 92) rotate(6)">
+    <rect width="220" height="340" rx="12" fill="#c7cfdb" stroke="#17191b" stroke-width="4"/>
+    <rect x="80" y="18" width="60" height="16" rx="8" fill="#dbe1ea" stroke="#17191b" stroke-width="3"/>
+  </g>
+  <!-- blíster principal -->
+  <g transform="translate(250 70)">
+    <rect width="260" height="420" rx="14" fill="#f4f5f2" stroke="#17191b" stroke-width="5"/>
+    <rect x="96" y="22" width="68" height="18" rx="9" fill="#dbe1ea" stroke="#17191b" stroke-width="3"/>
+    <text x="130" y="84" text-anchor="middle" font-size="30" font-weight="800" letter-spacing="3" fill="#17191b">MMS</text>
+    <rect x="40" y="108" width="180" height="270" rx="36" fill="#ffffff" fill-opacity=".55" stroke="#17191b" stroke-width="3"/>
+    <rect x="52" y="118" width="22" height="200" rx="11" fill="#ffffff" opacity=".9"/>
+    <!-- figura -->
+    <circle cx="130" cy="176" r="30" fill="#17191b"/>
+    <path d="M92 352 L98 236 Q130 214 162 236 L168 352 Z" fill="#17191b"/>
+    <rect x="104" y="236" width="52" height="10" fill="#1b6a4d"/>
+  </g>
+</svg>

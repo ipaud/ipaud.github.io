@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e2dfe9"/>
+  <g stroke="#17191b" stroke-width="5" stroke-linecap="round">
+    <line x1="400" y1="160" x2="330" y2="70"/><line x1="400" y1="160" x2="480" y2="80"/>
+  </g>
+  <rect x="220" y="160" width="360" height="290" rx="36" fill="#f4f3f6" stroke="#17191b" stroke-width="5"/>
+  <rect x="250" y="190" width="230" height="200" rx="34" fill="#17191b"/>
+  <g stroke="#2d3133" stroke-width="3">
+    <line x1="262" y1="220" x2="468" y2="220"/><line x1="258" y1="250" x2="472" y2="250"/><line x1="256" y1="280" x2="474" y2="280"/>
+    <line x1="256" y1="310" x2="474" y2="310"/><line x1="258" y1="340" x2="472" y2="340"/><line x1="262" y1="368" x2="468" y2="368"/>
+  </g>
+  <rect x="290" y="230" width="60" height="18" rx="9" fill="#5cc595" opacity=".8"/>
+  <circle cx="530" cy="230" r="20" fill="#f4f3f6" stroke="#17191b" stroke-width="4"/>
+  <line x1="530" y1="230" x2="530" y2="214" stroke="#17191b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="530" cy="290" r="14" fill="#f4f3f6" stroke="#17191b" stroke-width="4"/>
+  <g fill="#17191b"><rect x="510" y="330" width="40" height="5" rx="2"/><rect x="510" y="345" width="40" height="5" rx="2"/><rect x="510" y="360" width="40" height="5" rx="2"/></g>
+  <rect x="260" y="450" width="40" height="30" rx="6" fill="#17191b"/><rect x="500" y="450" width="40" height="30" rx="6" fill="#17191b"/>
+</svg>

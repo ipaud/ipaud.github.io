@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="600" fill="#e9ede6"/>
+  <circle cx="400" cy="300" r="150" fill="#17191b"/>
+  <circle cx="400" cy="300" r="118" fill="none" stroke="#2f3532" stroke-width="2" stroke-dasharray="4 10"/>
+  <circle cx="400" cy="300" r="46" fill="#2a2f2c" stroke="#5cc595" stroke-width="4"/>
+  <line x1="400" y1="300" x2="400" y2="190" stroke="#5cc595" stroke-width="6" stroke-linecap="round"/>
+  <g font-size="22" font-weight="700" fill="#17191b" text-anchor="middle" letter-spacing="2">
+    <text x="400" y="118" fill="#1b6a4d">STORY</text>
+    <text x="602" y="248">MEMORY</text>
+    <text x="548" y="500">MUSIC</text>
+    <text x="252" y="500">NATURE</text>
+    <text x="208" y="248">FREE</text>
+  </g>
+  <g fill="#9aa59b"><circle cx="400" cy="138" r="5" fill="#1b6a4d"/><circle cx="555" cy="252" r="5"/><circle cx="496" cy="436" r="5"/><circle cx="304" cy="436" r="5"/><circle cx="245" cy="252" r="5"/></g>
+</svg>

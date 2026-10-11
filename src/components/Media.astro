@@ -1,0 +1,19 @@
+---
+import { withBase } from '../data/site';
+
+interface Props {
+  id: string;
+  cover: string;
+  video?: string;
+  alt: string;
+  class?: string;
+  eager?: boolean;
+}
+const { id, cover, video, alt, class: extra = '', eager = false } = Astro.props;
+---
+<div class:list={['media', extra]} transition:name={`media-${id}`}>
+  <img src={withBase(cover)} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  {video && (
+    <video src={withBase(video)} muted loop playsinline preload="none" aria-hidden="true"></video>
+  )}
+</div>

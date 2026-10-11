@@ -1,0 +1,111 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { site, withBase } from '../data/site';
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; }
+const { title = site.title, description = site.intro } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Geist:wght@400;500&display=swap"
+    />
+    <ClientRouter />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-head">
+        <a class="home" href={withBase('/')}>{site.name}</a>
+        <nav>
+          {site.links.map((l) => <a class="u" href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+        </nav>
+      </header>
+
+      <slot />
+
+      <footer class="site-foot">
+        <span>© {new Date().getFullYear()} {site.name}</span>
+        <nav>
+          <a class="u" href={`mailto:${site.email}`}>{site.email}</a>
+          <a class="u" href={site.github} target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      // Vídeo al pasar el ratón (o al tocar en móvil) sobre una tarjeta.
+      function setupVideos() {
+        document.querySelectorAll<HTMLElement>('[data-hover-video]').forEach((el) => {
+          const video = el.querySelector('video');
+          const media = el.querySelector('.media');
+          if (!video || !media || el.dataset.ready) return;
+          el.dataset.ready = '1';
+          const play = () => { video.play().then(() => media.classList.add('playing')).catch(() => {}); };
+          const stop = () => { video.pause(); media.classList.remove('playing'); };
+          el.addEventListener('pointerenter', play);
+          el.addEventListener('pointerleave', stop);
+          el.addEventListener('focus', play);
+          el.addEventListener('blur', stop);
+        });
+      }
+
+      // Filtros de la portada; los huecos se recolocan con una transición.
+      function setupFilters() {
+        const bar = document.querySelector<HTMLElement>('.filters');
+        if (!bar || bar.dataset.ready) return;
+        bar.dataset.ready = '1';
+        bar.addEventListener('click', (e) => {
+          const btn = (e.target as HTMLElement).closest('button');
+          if (!btn) return;
+          const tag = btn.dataset.tag!;
+          const apply = () => {
+            bar.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+            document.querySelectorAll<HTMLElement>('.card').forEach((card) => {
+              const tags = (card.dataset.tags || '').split(',');
+              card.toggleAttribute('data-hidden', tag !== 'todos' && !tags.includes(tag));
+              card.style.animation = 'none';
+            });
+          };
+          // @ts-ignore: startViewTransition aún no está en todos los tipos
+          document.startViewTransition ? document.startViewTransition(apply) : apply();
+        });
+      }
+
+      // Fotos de la galería a pantalla grande.
+      function setupGallery() {
+        const dialog = document.querySelector<HTMLDialogElement>('dialog.viewer');
+        if (!dialog || dialog.dataset.ready) return;
+        dialog.dataset.ready = '1';
+        const img = dialog.querySelector('img')!;
+        const cap = dialog.querySelector('p')!;
+        document.querySelectorAll<HTMLButtonElement>('.gallery button').forEach((b) => {
+          b.addEventListener('click', () => {
+            img.src = b.dataset.src!;
+            img.alt = b.dataset.caption || '';
+            cap.textContent = b.dataset.caption || '';
+            dialog.showModal();
+          });
+        });
+        dialog.addEventListener('click', () => dialog.close());
+      }
+
+      document.addEventListener('astro:page-load', () => {
+        setupVideos();
+        setupFilters();
+        setupGallery();
+      });
+    </script>
+  </body>
+</html>

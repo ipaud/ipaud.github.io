@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="600" fill="#eef1f5"/>
+  <g fill="#17191b">
+    <g transform="translate(70 0)"><circle cx="0" cy="250" r="26"/><path d="M-34 400 L-28 296 Q0 278 28 296 L34 400 Z"/></g>
+    <g transform="translate(180 0)"><circle cx="0" cy="240" r="24"/><path d="M-30 400 L-30 286 Q0 266 30 286 L30 400 Z"/></g>
+    <g transform="translate(290 0)"><circle cx="0" cy="262" r="28"/><path d="M-40 400 L-34 310 Q0 290 34 310 L40 400 Z"/></g>
+    <g transform="translate(400 0)"><circle cx="0" cy="230" r="25"/><path d="M-30 400 L-26 276 Q0 258 26 276 L30 400 Z"/></g>
+    <g transform="translate(510 0)"><circle cx="0" cy="256" r="27"/><path d="M-36 400 L-30 302 Q0 282 30 302 L36 400 Z"/></g>
+    <g transform="translate(620 0)"><circle cx="0" cy="244" r="24"/><path d="M-32 400 L-28 290 Q0 272 28 290 L32 400 Z"/></g>
+    <g transform="translate(730 0)"><circle cx="0" cy="266" r="26"/><path d="M-34 400 L-30 312 Q0 294 30 312 L34 400 Z"/></g>
+  </g>
+  <line x1="30" y1="402" x2="770" y2="402" stroke="#17191b" stroke-width="3"/>
+  <g font-size="17" fill="#17191b" text-anchor="middle">
+    <text x="70" y="440">Konigsberg</text><text x="180" y="440">Yuri</text><text x="290" y="440">Padre</text>
+    <text x="400" y="440">Morris</text><text x="510" y="440">Stanley</text><text x="620" y="440">Kramer</text><text x="730" y="440">Frank</text>
+  </g>
+</svg>

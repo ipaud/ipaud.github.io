@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../data/site';
+
+const projects = (await getCollection('projects', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.order - a.data.order || b.data.year - a.data.year,
+);
+
+// Filtros generados a partir de las etiquetas de los proyectos.
+const counts = new Map<string, number>();
+projects.forEach((p) => p.data.tags.forEach((t) => counts.set(t, (counts.get(t) ?? 0) + 1)));
+const tags = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+---
+<Base>
+  <section class="hero">
+    <h1>{site.name}</h1>
+    <p>{site.intro}</p>
+  </section>
+
+  <div class="filters" role="group" aria-label="Filtrar proyectos">
+    <button type="button" data-tag="todos" aria-pressed="true">Todos<span>{projects.length}</span></button>
+    {tags.map(([tag, n]) => (
+      <button type="button" data-tag={tag} aria-pressed="false">{tag}<span>{n}</span></button>
+    ))}
+  </div>
+
+  <section class="grid">
+    {projects.map((project, i) => <ProjectCard project={project} index={i} />)}
+  </section>
+</Base>
